@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College of Computer Studies - Learning Resources</title>
+   <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="logo">College of Computer Studies</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#courses">Courses</a></li>
+                    <li><a href="#resources">Resources</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <section class="hero" id="home">
+        <div class="container">
+            <h1>Caculus for Computer Science</h1>
+            <p>Comprehensive learning resources for BSCS students - Second Semester 2024-2025</p>
+        </div>
+    </section>
+    
+    <section class="main-content container">
+        <div class="tabs">
+            <button class="tab-btn active" onclick="openTab('calculus')">Calculus</button>
+            <button class="tab-btn" onclick="openTab('probability')">Probability & Statistics</button>
+            <button class="tab-btn" onclick="openTab('rubric')">Assessment Rubric</button>
+        </div>
+        
+        <div id="calculus" class="tab-content active">
+            <h2>Calculus for Computer Science</h2>
+            <p>Explore fundamental calculus concepts essential for computer science students.</p>
+            
+            <div class="search-container">
+                <i class="search-icon">🔍</i>
+                <input type="text" class="search-input" placeholder="Search calculus topics..." onkeyup="filterArticles('calculus')">
+            </div>
+            
+            <div class="articles-container" id="calculus-articles">
+                <div class="article-card">
+                    <div class="article-image">lim</div>
+                    <div class="article-content">
+                        <h3>Preliminary Definitions of Limits</h3>
+                        <p>Understanding the basic concept of limits in calculus and how they form the foundation for derivatives and integrals.</p>
+                        <div class="article-meta">
+                            <span>Calculus</span>
+                            <span>15 min read</span>
+                        </div>
+                        <button class="btn" onclick="showArticle('limit-definitions')">Read</button>
+                    </div>
+                </div>
+                
+                <div class="article-card">
+                    <div class="article-image">∞</div>
+                    <div class="article-content">
+                        <h3>Infinite Limits and Limits at Infinity</h3>
+                        <p>Exploring how functions behave as they approach infinity or approach values where the function grows without bound.</p>
+                        <div class="article-meta">
+                            <span>Calculus</span>
+                            <span>20 min read</span>
+                        </div>
+                        <button class="btn" onclick="showArticle('infinite-limits')">Read</button>
+                    </div>
+                </div>
+                
+                <div class="article-card">
+                    <div class="article-image">d/dx</div>
+                    <div class="article-content">
+                        <h3>Derivatives: The Limit Definition</h3>
+                        <p>The fundamental concept of derivatives using the limit definition and its applications in computer science.</p>
+                        <div class="article-meta">
+                            <span>Calculus</span>
+                            <span>25 min read</span>
+                        </div>
+                        <button class="btn" onclick="showArticle('derivatives')">Read</button>
+                    </div>
+                </div>
+                
+                <div class="article-card">
+                    <div class="article-image">∫</div>
+                    <div class="article-content">
+                        <h3>Rules of Differentiation</h3>
+                        <p>Master the essential rules for finding derivatives efficiently, from the power rule to the chain rule.</p>
+                        <div class="article-meta">
+                            <span>Calculus</span>
+                            <span>30 min read</span>
+                        </div>
+                        <button class="btn" onclick="showArticle('differentiation-rules')">Read</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="probability" class="tab-content">
+            <h2>Probability & Statistics in Computer Science</h2>
+            <p>Statistical methods and probability theory applied to computer science problems.</p>
+            
+            <div class="search-container">
+                <i class="search-icon">🔍</i>
+                <input type="text" class="search-input" placeholder="Search probability topics..." onkeyup="filterArticles('probability')">
+            </div>
+            
+            <div class="articles-container" id="probability-articles">
+                <div class="article-card">
+                    <div class="article-image">P(A)</div>
+                    <div class="article-content">
+                        <h3>Basic Probability Concepts</h3>
+                        <p>Introduction to probability theory, sample spaces, events, and probability rules.</p>
+                        <div class="article-meta">
+                            <span>Probability</span>
+                            <span>18 min read</span>
+                        </div>
+                        <button class="btn" onclick="showArticle('basic-probability')">Read</button>
+                    </div>
+                </div>
+                
+                <div class="article-card">
+                    <div class="article-image">σ</div>
+                    <div class="article-content">
+                        <h3>Descriptive Statistics</h3>
+                        <p>Measures of central tendency and dispersion, and how to summarize data effectively.</p>
+                        <div class="article-meta">
+                            <span>Statistics</span>
+                            <span>22 min read</span>
+                        </div>
+                        <button class="btn" onclick="showArticle('descriptive-stats')">Read</button>
+                    </div>
+                </div>
+                
+                <div class="article-card">
+                    <div class="article-image">λ</div>
+                    <div class="article-content">
+                        <h3>Probability Distributions</h3>
+                        <p>Understanding discrete and continuous probability distributions in CS applications.</p>
+                        <div class="article-meta">
+                            <span>Probability</span>
+                            <span>28 min read</span>
+                        </div>
+                        <button class="btn" onclick="showArticle('distributions')">Read</button>
+                    </div>
+                </div>
+                
+                <div class="article-card">
+                    <div class="article-image">H₀</div>
+                    <div class="article-content">
+                        <h3>Statistical Inference</h3>
+                        <p>Hypothesis testing and confidence intervals for making data-driven decisions.</p>
+                        <div class="article-meta">
+                            <span>Statistics</span>
+                            <span>35 min read</span>
+                        </div>
+                        <button class="btn" onclick="showArticle('inference')">Read</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="rubric" class="tab-content">
+            <div class="rubric">
+                <h2>Rubric of Assessment</h2>
+                <p><strong>Course:</strong> BSCS 1A<br>
+                <strong>Subject:</strong> Probability & Statistics in Computer Science<br>
+                <strong>Examination Period:</strong> Final Examination</p>
+                <Strong>Group Member:</Strong> Reyes Jr. Reynaldo B. </p>
+                <Strong>Contribution To This Project:</Strong> Creating this website</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Criteria</th>
+                            <th>5</th>
+                            <th>4</th>
+                            <th>3</th>
+                            <th>2</th>
+                            <th>1</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td rowspan="3">Presentation</td>
+                            <td>The project is excellently presented.</td>
+                            <td>The project is very satisfactorily presented.</td>
+                            <td>The project is satisfactorily presented.</td>
+                            <td>The project is unsatisfactorily presented.</td>
+                            <td>The project is poorly presented.</td>
+                        </tr>
+                        <tr>
+                            <td>The project shows substantive and thorough understanding of the course.</td>
+                            <td>The project shows adequate understanding of the course.</td>
+                            <td>The project shows general understanding of the course.</td>
+                            <td>The project shows lack of understanding of the course.</td>
+                            <td>The project shows no understanding of the course.</td>
+                        </tr>
+                        <tr>
+                            <td>The project is well-designed and free from any errors.</td>
+                            <td>The project is effectively designed and free from any errors.</td>
+                            <td>The project is effectively designed and has minimal errors.</td>
+                            <td>The project is not effective and has many errors.</td>
+                            <td>The project has no effect at all.</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="3">Usability</td>
+                            <td>The project is very useful for the entire duration of the course.</td>
+                            <td>The project is very useful for the course.</td>
+                            <td>The project is quite useful for course.</td>
+                            <td>The project is somewhat useful for the course.</td>
+                            <td>The project is not useful for the course at all.</td>
+                        </tr>
+                        <tr>
+                            <td>The project is highly user-friendly.</td>
+                            <td>The project is user-friendly.</td>
+                            <td>The project is quite user-friendly.</td>
+                            <td>The project maybe user-friendly.</td>
+                            <td>The project is not user-friendly.</td>
+                        </tr>
+                        <tr>
+                            <td>The project can be excellently utilized in other discipline related to the course.</td>
+                            <td>The project can be utilized in other disciplines related to the course.</td>
+                            <td>The project can be utilized in relation to the course.</td>
+                            <td>The project cannot be utilized in other discipline related to the course.</td>
+                            <td>The project utilization is questionable.</td>
+                        </tr>
+                        <tr>
+                            <td>Relevance</td>
+                            <td>The relevance of the project to the course is outstanding.</td>
+                            <td>The relevance of the project to the course is very satisfactory.</td>
+                            <td>The relevance of the project to the course is satisfactory.</td>
+                            <td>The relevance of the project to the course is poor.</td>
+                            <td>The project is not relevant to the course.</td>
+                        </tr>
+                        <tr>
+                            <td>Timeliness</td>
+                            <td>Submitted the project ahead of time.</td>
+                            <td>Submitted the project on the due date.</td>
+                            <td>Submitted the project 1-3 days after the due date.</td>
+                            <td>Submitted the project 4-7 days after the due date.</td>
+                            <td>Submitted the project more than 7 days after the due date.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <p><strong>Effectivity Date:</strong> June 2016<br>
+                <strong>Revision:</strong> 1</p>
+            </div>
+        </div>
+        
+        <!-- Article Detail Views -->
+        <div id="limit-definitions" class="article-page">
+            <a href="#" class="back-btn" onclick="hideArticle()">← Back to Articles</a>
+            <h1>Preliminary Definitions of Limits</h1>
+            <div class="article-meta-large">
+                <span>Calculus for Computer Science</span>
+                <span>15 min read</span>
+            </div>
+            
+            <div class="article-body">
+                <h2>LIMITS</h2>
+                <p>The limit of a function <span class="math">f(x)</span>, as <span class="math">x</span> approaches <span class="math">a ∈ R</span>, is <span class="math">L ∈ R</span>, and we write:</p>
+                <p class="math">\[\lim_{x \to a} f(x) = L\]</p>
+                <p>if the values of <span class="math">f(x)</span> can be arbitrarily close to <span class="math">L</span> by choosing the values <span class="math">x</span> close enough to <span class="math">a</span>.</p>
+                
+                <h2>FINDING THE LIMIT OF A FUNCTION USING TABLE AND GRAPH</h2>
+                <h3>Example 1:</h3>
+                <p class="math">\[ \lim_{x \to 2} f(x) = 3x + 1 \]</p>
+                <p class="math">\[ \lim_{x \to 2} f(x) = 3(2) + 1 = 7 \]</p>
+                <p><strong>Therefore the limit is 7</strong></p>
+                
+                <h3>TABLE</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th><span class="math">x</span> approaches 2 from the left</th>
+                            <th><span class="math">x</span> approaches 2 from the right</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1.9, 1.99, 1.999</td>
+                            <td>2.001, 2.01, 2.1</td>
+                        </tr>
+                        <tr>
+                            <td>6.7, 6.97, 6.997</td>
+                            <td>7.003, 7.03, 7.3</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p><span class="math">y</span> approaches 7 from both sides</p>
+            </div>
+        </div>
+        
+        <div id="infinite-limits" class="article-page">
+            <a href="#" class="back-btn" onclick="hideArticle()">← Back to Articles</a>
+            <h1>Infinite Limits and Limits at Infinity</h1>
+            <div class="article-meta-large">
+                <span>Calculus for Computer Science</span>
+                <span>20 min read</span>
+            </div>
+            
+            <div class="article-body">
+                <h2>INFINITE LIMITS</h2>
+                <p>Suppose <span class="math">f</span> is defined for all <span class="math">x</span> near <span class="math">a</span>. If <span class="math">f(x)</span> grows arbitrarily large for all <span class="math">x</span> sufficiently close (but not equal) to <span class="math">a</span>, we write:</p>
+                <p class="math">\[ \lim_{x \to a} f(x) = \infty \]</p>
+                <p>We say the limit of <span class="math">f(x)</span> as <span class="math">x</span> approaches <span class="math">a</span> is infinity.</p>
+                
+                <p>If <span class="math">f(x)</span> is negative and grows arbitrarily large in magnitude for all <span class="math">x</span> sufficiently close (but not equal) to <span class="math">a</span>, we write:</p>
+                <p class="math">\[ \lim_{x \to a} f(x) = -\infty \]</p>
+                <p>In this case, we say the limit of <span class="math">f(x)</span> as <span class="math">x</span> approaches <span class="math">a</span> is negative infinity. In both cases, <strong>the limit does not exist</strong>.</p>
+            </div>
+        </div>
+        
+        <div id="derivatives" class="article-page">
+            <a href="#" class="back-btn" onclick="hideArticle()">← Back to Articles</a>
+            <h1>Derivatives: The Limit Definition</h1>
+            <div class="article-meta-large">
+                <span>Calculus for Computer Science</span>
+                <span>25 min read</span>
+            </div>
+            
+            <div class="article-body">
+                <h2>THE LIMIT DEFINITION OF DERIVATIVES</h2>
+                <p>The derivative of <span class="math">f</span> is the function:</p>
+                <p class="math">\[ f'(x) = \lim_{h \to 0} \frac{f(x + h) - f(x)}{h} \]</p>
+                <p>Provided the limit exists. If <span class="math">f'(x)</span> exists, we say <span class="math">f</span> is differentiable at <span class="math">x</span>. If <span class="math">f</span> is differentiable at every point of an open interval <span class="math">I</span>, we say that <span class="math">f</span> is differentiable on <span class="math">I</span>.</p>
+                
+                <h2>EXAMPLE</h2>
+                <p>Using the limit definition of derivative, find <span class="math">f'(x)</span>, where <span class="math">f(x) = x^2</span>.</p>
+                
+                <h3>Solution:</h3>
+                <p>If <span class="math">f(x) = x^2</span>, then <span class="math">f(x + h) = (x + h)^2</span>.</p>
+                <p class="math">\[ f'(x) = \lim_{h \to 0} \frac{f(x + h) - f(x)}{h} \]</p>
+                <p class="math">\[ f'(x) = \lim_{h \to 0} \frac{(x + h)^2 - x^2}{h} \]</p>
+                <p class="math">\[ f'(x) = \lim_{h \to 0} \frac{x^2 + 2xh + h^2 - x^2}{h} \]</p>
+                <p class="math">\[ f'(x) = \lim_{h \to 0} \frac{2xh + h^2}{h} \]</p>
+                <p class="math">\[ f'(x) = \lim_{h \to 0} \frac{h(2x + h)}{h} \]</p>
+                <p class="math">\[ f'(x) = \lim_{h \to 0} 2x + h \]</p>
+                <p class="math">\[ f'(x) = 2x + 0 \]</p>
+                <p class="math">\[ f'(x) = 2x \]</p>
+                <p>Therefore <span class="math">f'(x) = 2x</span>, using the limit definition of derivatives.</p>
+            </div>
+        </div>
+        
+        <div id="differentiation-rules" class="article-page">
+            <a href="#" class="back-btn" onclick="hideArticle()">← Back to Articles</a>
+            <h1>Rules of Differentiation</h1>
+            <div class="article-meta-large">
+                <span>Calculus for Computer Science</span>
+                <span>30 min read</span>
+            </div>
+            
+            <div class="article-body">
+                <h2>RULES OF DIFFERENTIATION</h2>
+                
+                <h3>THEOREM 2: CONSTANT RULE</h3>
+                <p>If <span class="math">c</span> is a real number, then:</p>
+                <p class="math">\[ \frac{d}{dx} (c) = 0 \]</p>
+                <p>This rule states that the derivative of a constant is always equal to zero.</p>
+                
+                <h3>Examples:</h3>
+                <ol>
+                    <li class="math">\[ \frac{d}{dx} (2^8) = 0 \]</li>
+                    <li class="math">\[ \frac{d}{dx} (1,000,000) = 0 \]</li>
+                    <li class="math">\[ \frac{d}{dx} (40) = 0 \]</li>
+                </ol>
+            </div>
+        </div>
+        
+        <!-- Placeholder article pages for probability content -->
+        <div id="basic-probability" class="article-page">
+            <a href="#" class="back-btn" onclick="hideArticle()">← Back to Articles</a>
+            <h1>Basic Probability Concepts</h1>
+            <div class="article-meta-large">
+                <span>Probability & Statistics</span>
+                <span>18 min read</span>
+            </div>
+            <div class="article-body">
+                <h2>Introduction to Probability</h2>
+                <p>Probability theory provides the mathematical foundation for statistical inference and is essential for computer science applications like algorithms, machine learning, and data analysis.</p>
+                
+                <h3>Key Concepts:</h3>
+                <ul>
+                    <li><strong>Sample Space (S):</strong> The set of all possible outcomes of an experiment</li>
+                    <li><strong>Event (E):</strong> A subset of the sample space</li>
+                    <li><strong>Probability Function (P):</strong> A function that assigns a probability to each event</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div id="descriptive-stats" class="article-page">
+            <a href="#" class="back-btn" onclick="hideArticle()">← Back to Articles</a>
+            <h1>Descriptive Statistics</h1>
+            <div class="article-meta-large">
+                <span>Probability & Statistics</span>
+                <span>22 min read</span>
+            </div>
+            <div class="article-body">
+                <h2>Measures of Central Tendency</h2>
+                <p>Descriptive statistics summarize and organize characteristics of a data set.</p>
+                
+                <h3>Common Measures:</h3>
+                <ul>
+                    <li><strong>Mean:</strong> The average value</li>
+                    <li><strong>Median:</strong> The middle value</li>
+                    <li><strong>Mode:</strong> The most frequent value</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div id="distributions" class="article-page">
+            <a href="#" class="back-btn" onclick="hideArticle()">← Back to Articles</a>
+            <h1>Probability Distributions</h1>
+            <div class="article-meta-large">
+                <span>Probability & Statistics</span>
+                <span>28 min read</span>
+            </div>
+            <div class="article-body">
+                <h2>Discrete vs. Continuous Distributions</h2>
+                <p>Probability distributions describe how probabilities are distributed over the values of a random variable.</p>
+                
+                <h3>Common Distributions:</h3>
+                <ul>
+                    <li><strong>Discrete:</strong> Binomial, Poisson</li>
+                    <li><strong>Continuous:</strong> Normal, Exponential</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div id="inference" class="article-page">
+            <a href="#" class="back-btn" onclick="hideArticle()">← Back to Articles</a>
+            <h1>Statistical Inference</h1>
+            <div class="article-meta-large">
+                <span>Probability & Statistics</span>
+                <span>35 min read</span>
+            </div>
+            <div class="article-body">
+                <h2>Hypothesis Testing</h2>
+                <p>Statistical inference allows us to make conclusions about a population based on sample data.</p>
+                
+                <h3>Key Concepts:</h3>
+                <ul>
+                    <li><strong>Null Hypothesis (H₀):</strong> Default position</li>
+                    <li><strong>Alternative Hypothesis (H₁):</strong> What we want to prove</li>
+                    <li><strong>p-value:</strong> Probability of observing the data if H₀ is true</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Loading indicator -->
+        <div class="loader" id="loader"></div>
+    </section>
+    
+    <footer>
+        <div class="container footer-content">
+            <div class="logo">College of Computer Studies</div>
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#courses">Courses</a>
+                <a href="#resources">Resources</a>
+            </div>
+            <div class="copyright">
+                &copy; 2025 College of Computer Studies. All rights reserved.
+            </div>
+        </div>
+    </footer>
+    
+    <script src="scripts.js"></script>
+</body>
+</html>
